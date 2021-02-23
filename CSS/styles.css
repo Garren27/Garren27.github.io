@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar{
+  background-color: red;
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+
+}
+
+#navbar li {
+  float: left;
+}
+
+#navbar li#date {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+#navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+#navbar li a:hover {
+  background-color: #111111;
+}
+
+html, body {
+  height: 100%;
+  background-color: #ffffcc;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+  flex: 1;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.bodyContent {
+  margin: 10px;
+}
+
+p.bodyContent{
+  text-indent: 1em;
+}
+
+li.bodyContent{
+  list-style-type: none;
+}
+
+.bodyContentImage {
+  margin-right: 10px;
+  margin-bottom: 3px;
+  float: right;
+}
+
+#footer {
+  width: 100%;
+  background-color: #333333;
+  clear: both;
+}
+
+#contactFooter {
+  width: 100%;
+  background-color: #333333;
+}
+
+.footerBarImage {
+  padding-top: 10px;
+  padding-right: 10px;
+  float: right;
+}
+
+.footerBar {
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#footBodySeperator {
+  clear: both;
+  margin-bottom: 10px;
+
+}
+
+.rightImgs {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  float: right;
+}
+
+.leftImgs {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  float: left;
+}
+
+.interests {
+  margin-left: 20px;
+}
+
+.gamesList {
+  margin-left: 30px;
+}
+
+.gitHubLink {
+  color: white;
+  text-decoration: none;
+}

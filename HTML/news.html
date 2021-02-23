@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Garren's PiSite - News</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="../js/date.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Navbar along the top of the page -->
+      <div id="navbar">
+        <ul>
+          <!-- LinkedIn Logo and Link -->
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../HTML/news.html">News</a></li>
+          <li><a href="../HTML/projects.html">Projects</a></li>
+          <li><a href="../HTML/about.html">About Me</a></li>
+          <li><a href="../HTML/contact.html">Contact</a></li>
+          <li id="date"><script>date()</script></li>
+        </ul>
+      </div>
+
+      <!-- Main landing page body -->
+      <div id="body">
+        <h1 class="bodyContent">News and Blog</h1>
+
+        <div id="newsblock">
+
+          <hr>
+
+          <h3 class="bodyContent">Post #2 - PiSite</h3>
+          <p class="bodyContent">September 1 2019</p>
+          <p class="bodyContent">Today I remembered that I had a Raspberry Pi laying around and I wondered if it would be possible to host a website on it. A quick Google search
+            showed that it was quite possible and many had done so before so there were a few tutorials. After installing a fresh copy of Raspbian on the Pi, installing Apache was easy
+            from the command line. My idea was to host the site on the Pi so I needed a domain name. Unfortunately, the dynamic DNS site the tutorials pointed to were no longer
+            operating, so I had to find a different one. No-ip.com was the site that many recommended, and installation of their Pi side software was easy. This software allowed
+            the Pi to detect if the address that led to my home's network had been changed. The hardest part was setting up the router to allow requests to port 80 in from the Internet
+            since every router is different and some tabs in mine were misleadingly titled. After reviewing some router documentation I had my Pi set up and serving pages to
+            garrenmccallum.ddns.net, which was the most professional looking domain name while being completely free.
+            </p>
+
+          <h3 class="bodyContent">Post #1 - Graduation</h3>
+          <p class="bodyContent">June 13 2019</p>
+          <p class="bodyContent">Today I got to walk across the stage of Alumni Hall and receive my diploma. I was in the ceremony with all other Honours Specialization in
+            Science majors, but I was one of the few that graduated from my Honours Specialization in Computer Science program, of which I am very proud. This is also the time I have
+            decided to start my blog, and will be updating it as I see fit news or project progress or job applications.</p>
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+
+        <footer>
+          <img class="footerBarImage" title="Pi Logo" src="../Resources/PiLogo.jpg" alt="Pi Logo" width="85" height="100" ></img>
+          <img class="footerBarImage" title="HTML5 Logo" src="../Resources/htmlLogo.png" alt="HTML5 Logo" width="85" height="100" ></img>
+          <img class="footerBarImage" title="UWO Logo" src="../Resources/Stacked_Rev_Full.gif" alt="Western Logo" width="85" height="100" ></img>
+
+          <p class="footerBar">Created By: Garren McCallum</p>
+          <p class="footerBar"><a class="gitHubLink" href="https://github.com/Garren27" target="_blank">GitHub Repo Link</a></p>
+          <p class="footerBar">Proudly powered by my Raspberry Pi</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
