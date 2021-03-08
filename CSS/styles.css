@@ -50,6 +50,7 @@ html, body {
 
 #body {
   flex: 1;
+  position: relative;
 }
 
 #wrapper {
@@ -130,4 +131,23 @@ li.bodyContent{
 .gitHubLink {
   color: white;
   text-decoration: none;
+}
+
+#addButton {
+  background-color: #333333;
+  border: none;
+  text-align: center;
+  font-size: 34px;
+  font-family: 'Roboto Condensed', sans-serif;
+  border-radius: 50%;
+  padding: 20px 28px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
+
+#addButton:hover {
+  background-color: #000000; /* Green */
 }
