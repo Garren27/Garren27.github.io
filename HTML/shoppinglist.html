@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <script src="../js/date.js"></script>
-    <script src="../js/addItem.js"></script>
+    <script src="../js/database.js"></script>
   </head>
-  <body>
+  <body onload="displayItems()">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 
@@ -54,17 +54,33 @@
       </div>
 
       <!-- Main landing page body -->
-      <div id="body">
+      <div id="body" >
         <h1 class="bodyContent">Shopping List</h1>
 
         <hr>
 
         <ul id="shoppingListItems">
-
         </ul>
 
-        <button type="button" id="addButton" onclick="getItem(database)">+</button>
-        <!--  <p id="result"></p> -->
+
+        <div class="bodyContent" id="createItem" style="display:none">
+        <h3>Add an Item</h3>
+          <br>
+          <form id="createItemForm">
+              <input type="text" id="itemName" placeholder="Name of Item" required>
+              <input type="text" id="itemQuantity" placeholder="Quantity" required>
+          </form>
+          <br>
+          <button type="button" id="submitItemButton" onclick="addItem()">Add Item</button>
+          <button type="button" id="hideFormButton" onclick="hideForm()">Cancel</button>
+
+        </div>
+
+
+
+
+
+        <button type="button" id="showFormButton" onclick="showForm()">+</button>
       </div>
 
       <div id="footer">
