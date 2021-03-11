@@ -36,6 +36,7 @@ function displayItems(){
 	var entries = firebase.database().ref('entries/');
 	
 	entries.on('value', (snapshot) => {
+		var ul = document.getElementById("shoppingListItems");
 		ul.innerHTML = "";
   		const data = snapshot.val();
   		console.log(data);
@@ -54,7 +55,7 @@ function displayItems(){
       		console.log(childData.name);
 
       		// Add it to the webpage
-      		var ul = document.getElementById("shoppingListItems");
+
       		var li = document.createElement("li");
   			li.appendChild(document.createTextNode(childData.name));
   			ul.appendChild(li);
