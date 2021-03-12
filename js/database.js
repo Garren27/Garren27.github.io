@@ -36,8 +36,15 @@ function displayItems(){
 	var entries = firebase.database().ref('entries/');
 	
 	entries.on('value', (snapshot) => {
-		var ul = document.getElementById("shoppingListItems");
-		ul.innerHTML = "";
+		var shoppingListItems = document.getElementById("shoppingListItems");
+		shoppingListItems.innerHTML = "";
+
+		var shoppingListQuantities = document.getElementById("shoppingListQuantities");
+		shoppingListQuantities.innerHTML = "";
+
+		var deleteButtons = document.getElementById("deleteButtonsList");
+		deleteButtons.innerHTML = "";
+
   		const data = snapshot.val();
   		console.log(data);
   		
@@ -55,14 +62,37 @@ function displayItems(){
       		console.log(childData.name);
 
       		// Add it to the webpage
+      		// Add Item names
+      		var itemsListEntry = document.createElement("li");
+  			itemsListEntry.appendChild(document.createTextNode(childData.name));
+  			shoppingListItems.appendChild(itemsListEntry);
 
-      		var li = document.createElement("li");
-  			li.appendChild(document.createTextNode(childData.name));
-  			ul.appendChild(li);
+  			// Add item quanities
+  			var quantityListEntry = document.createElement("li");
+  			quantityListEntry.appendChild(document.createTextNode(childData.quantity));
+  			shoppingListQuantities.appendChild(quantityListEntry);
+
+  			// Add Delete buttons
+  			var delButton = document.createElement("button");
+  			delButton.innerHTML = "x";
+  			delButton.className = "deleteBtn";
+  			delButton.setAttribute("onclick", "test(this.id)");
+  			delButton.setAttribute("id", key);
+  			var delButtonListEntry = document.createElement("li");
+  			delButtonListEntry.appendChild(delButton);
+  			deleteButtons.appendChild(delButtonListEntry);
+
+
+
   		});
   			
 	});
 	
+}
 
-
+function test(key){
+	console.log(key);
+	firebase.database().ref('entries/' + key).set(
+		null
+	);
 }

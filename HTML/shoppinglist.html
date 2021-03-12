@@ -43,7 +43,6 @@
       <!-- Navbar along the top of the page -->
       <div id="navbar">
         <ul>
-          <!-- LinkedIn Logo and Link -->
           <li><a href="../index.html">Home</a></li>
           <li><a href="../HTML/news.html">News</a></li>
           <li><a href="../HTML/projects.html">Projects</a></li>
@@ -57,13 +56,24 @@
       <div id="body" >
         <h1 class="bodyContent">Shopping List</h1>
 
-        <hr>
+        
+        <div class="shoppingListWrapper">
+          <ul id="shoppingListItems" class="shoppingListItems">
+            <!-- Entries Names from Firebase -->
+          </ul>
 
-        <ul id="shoppingListItems">
-        </ul>
+          <ul id="shoppingListQuantities" class="shoppingListItems">
+            <!-- Entries Quantities from Firebase -->
+          </ul>
+
+          <ul id="deleteButtonsList" class="shoppingListItems">
+            <!-- Delete buttons from Firebase -->
+          </ul>
+        </div>
 
 
         <div class="bodyContent" id="createItem" style="display:none">
+
         <h3>Add an Item</h3>
           <br>
           <form id="createItemForm">

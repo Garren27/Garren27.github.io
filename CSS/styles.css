@@ -152,3 +152,27 @@ li.bodyContent{
 #addButton:hover {
   background-color: #000000; /* Green */
 }
+
+.shoppingListItems{
+  list-style: none;
+}
+
+.shoppingListWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background: LightGrey;
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 2em;
+}
+
+.deleteBtn {
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 0px 5px;
+  outline: none;
+  text-align: center;
+}
