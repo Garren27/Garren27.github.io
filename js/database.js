@@ -22,7 +22,7 @@ function addItem(){
     	alert("There was an error adding the item")
   		} else {
     	// Data saved successfully!
-    	alert("Data was added successfully!");
+    	console.log("Data was added successfully!");
   		}
   	});
 
