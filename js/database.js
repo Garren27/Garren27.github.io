@@ -22,7 +22,7 @@ function addItem(){
     	alert("There was an error adding the item")
   		} else {
     	// Data saved successfully!
-    	alert("Data was added successfully!");
+    	console.log("Data was added successfully!");
   		}
   	});
 
@@ -76,7 +76,7 @@ function displayItems(){
   			var delButton = document.createElement("button");
   			delButton.innerHTML = "x";
   			delButton.className = "deleteBtn";
-  			delButton.setAttribute("onclick", "test(this.id)");
+  			delButton.setAttribute("onclick", "deleteEntry(this.id)");
   			delButton.setAttribute("id", key);
   			var delButtonListEntry = document.createElement("li");
   			delButtonListEntry.appendChild(delButton);
@@ -90,8 +90,9 @@ function displayItems(){
 	
 }
 
-function test(key){
+function deleteEntry(key){
 	console.log(key);
+	// Remove entry with specified key from Firebase
 	firebase.database().ref('entries/' + key).set(
 		null
 	);
