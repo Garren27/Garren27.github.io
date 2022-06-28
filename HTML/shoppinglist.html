@@ -58,17 +58,21 @@
 
         
         <div class="shoppingListWrapper">
-          <ul id="shoppingListItems" class="shoppingListItems">
+          <!-- <ul id="shoppingListItems" class="shoppingListItems"> -->
             <!-- Entries Names from Firebase -->
-          </ul>
+          <!-- </ul> -->
 
-          <ul id="shoppingListQuantities" class="shoppingListItems">
+          <!-- <ul id="shoppingListQuantities" class="shoppingListItems"> -->
             <!-- Entries Quantities from Firebase -->
-          </ul>
+          <!-- </ul> -->
 
-          <ul id="deleteButtonsList" class="shoppingListItems">
+          <!-- <ul id="deleteButtonsList" class="shoppingListItems"> -->
             <!-- Delete buttons from Firebase -->
-          </ul>
+          <!-- </ul> -->
+
+          <table id="dataTable">
+
+          </table>
         </div>
 
 
@@ -77,8 +81,8 @@
         <h3>Add an Item</h3>
           <br>
           <form id="createItemForm">
-              <input type="text" id="itemName" placeholder="Name of Item" required>
-              <input type="text" id="itemQuantity" placeholder="Quantity" required>
+              <input type="text" id="itemName" placeholder="Name of Item">
+              <input type="text" id="itemQuantity" placeholder="Quantity">
           </form>
           <br>
           <button type="button" id="submitItemButton" onclick="addItem()">Add Item</button>
@@ -87,7 +91,7 @@
         </div>
 
 
-
+        <br />
 
 
         <button type="button" id="showFormButton" onclick="showForm()">+</button>
