@@ -155,6 +155,7 @@ li.bodyContent{
 
 .shoppingListItems{
   list-style: none;
+  border-style: inset;
 }
 
 .shoppingListWrapper {
@@ -166,13 +167,27 @@ li.bodyContent{
   margin-top: 2em;
 }
 
+#dataTable {
+  table-layout: fixed;
+  width: 100%;
+}
+
 .deleteBtn {
   background: red;
   border: none;
   color: white;
-  border-radius: 50%;
+  border-radius: 50%; 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   padding: 0px 5px;
   outline: none;
   text-align: center;
 }
+
+.shoppingListEntry {
+  /*background: #ffffcc;*/
+  align-items: center;
+  border-style: outset;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
